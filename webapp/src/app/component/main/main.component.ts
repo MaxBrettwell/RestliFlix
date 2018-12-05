@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
   constructor(private movieServie: MovieService) { }
   
   ngOnInit() {    
-    this.movieServie.getMovieList().subscribe(response => {this.movieList = response; console.log(response);)
+    this.movieServie.getMovieList().subscribe(response => {this.movieList = response; console.log(response);});
   }
 
   loadMovie(movieUrl: MovieUrl){
