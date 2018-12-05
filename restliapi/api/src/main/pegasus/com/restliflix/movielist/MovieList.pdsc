@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "MovieList",
+  "namespace": "com.restliflix.movielist",
+  "doc": "Movie Data",
+  "fields":[
+        {
+            "name":"movies",
+            "type":{
+                "type": "array",  
+                "items":{
+                    "name":"Movie",
+                    "type":"record",
+                    "fields":[
+                        {"name":"name", "type":"string"},
+                        {"name":"id", "type":"int"}
+                    ]
+                }
+            }
+        }
+    ] 
+}

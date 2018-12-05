@@ -1,0 +1,7 @@
+<h1>RESTLI-FLIX</h1>
+<p>
+    A movie carousel app written in Angular with Rest.li backend
+</p>
+
+<carousel-component [movieList]='movieList' (movieSelected)='loadMovie($event)'></carousel-component>
+<video-component [movieUrl]='movieUrl'></video-component>

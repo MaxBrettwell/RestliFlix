@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "MovieUrl",
+  "namespace": "com.restliflix.movieurl",
+  "doc": "Movie Url",
+  "fields": [
+    {
+      "name": "id",
+      "type": "long",
+      "doc": "Movie ID"
+    },
+    {
+      "name": "movieUrl",
+      "type": "string",
+      "doc": "Movie Video URL"
+    }
+  ]
+}

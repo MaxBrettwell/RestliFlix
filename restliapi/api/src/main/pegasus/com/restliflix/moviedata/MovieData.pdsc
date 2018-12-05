@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "MovieData",
+  "namespace": "com.restliflix.moviedata",
+  "doc": "Movie Data",
+  "fields": [
+    {
+      "name": "id",
+      "type": "long",
+      "doc": "Movie ID"
+    },
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "doc": "Movie Image URL"
+    },
+    {
+      "name": "descr",
+      "type": "string",
+      "doc": "Movie description"
+    },
+    {
+      "name": "year",
+      "type": "int",
+      "doc": "Movie release year"
+    }
+  ]
+}

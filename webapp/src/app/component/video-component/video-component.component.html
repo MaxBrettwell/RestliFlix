@@ -1,0 +1,8 @@
+
+
+<div *ngIf='hasMovie' class="video-container">
+  <video controls controlsList="nodownload" >  
+    <!-- <source src="https://dz1vmszs6rjp8.cloudfront.net/t/v2/3be2f94d-da7c-454b-849f-3e2f8b31a5bd/ToyStory4_DomesticTrailer1A_Clouds_NoGreenband_x264-(1)/high.mp4" type="video/mp4">  -->
+      <source src={{movieUrl.movieUrl}} type="video/mp4"> 
+  </video>
+</div>

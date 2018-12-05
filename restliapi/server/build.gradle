@@ -1,0 +1,37 @@
+apply plugin: 'war'
+apply plugin: 'pegasus'
+
+
+//for courier
+apply plugin: 'java'
+//apply plugin: 'courier'
+
+ext.apiProject = project(':api')
+
+
+dependencies {
+  compile project(path: ':api', configuration: 'dataTemplate')
+  compile spec.product.pegasus.restliServer
+  compile spec.product.pegasus.restliNettyStandalone
+  implementation 'com.google.code.gson:gson:2.8.5'  
+  compile group: 'org.apache.avro', name: 'avro', version: '1.8.2'        
+  // https://mvnrepository.com/artifact/com.linkedin.pegasus/data-avro-1_6
+  compile group: 'com.linkedin.pegasus', name: 'data-avro-1_6', version: '24.0.2'
+  compile group: 'org.coursera.courier', name: 'courier-java-generator', version: '2.0.14'  
+
+  // https://mvnrepository.com/artifact/com.linkedin.pegasus/restli-internal-testutils
+testCompile group: 'com.linkedin.pegasus', name: 'restli-internal-testutils', version: '10.1.3'
+  
+}
+
+task startMovieServer(type: JavaExec) {
+  main = 'com.linkedin.restli.server.NettyStandaloneLauncher'
+  //args = ['-port', '8080', '-packages', 'com.example.fortune.impl']
+  args = ['-port', '8080', '-packages', 'com.restliflix.movieurl,com.restliflix.moviedata,com.restliflix.movielist']
+  classpath = sourceSets.main.runtimeClasspath
+  standardInput = System.in
+}
+
+ //courier {
+ //  codeGenerator 'org.coursera.courier.JavaGenerator'
+ //}

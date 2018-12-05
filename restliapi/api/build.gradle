@@ -1,0 +1,5 @@
+apply plugin: 'pegasus'
+
+dependencies {
+  //avroSchemaGenerator "com.linkedin.pegasus:data-avro-generator:19.0.3" 
+}
